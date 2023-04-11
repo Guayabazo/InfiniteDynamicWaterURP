@@ -9,7 +9,8 @@ public class WaterData : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        ripples = ToTexture2D(ripplesTexture);
+        ripples = new Texture2D(ripplesTexture.width, ripplesTexture.height, TextureFormat.RGB24, false);
+        ripples = ToTexture2D(ripplesTexture, ripples);
         playerPos = Shader.GetGlobalVector("_PlayerPos");
     }
     
@@ -17,13 +18,12 @@ public class WaterData : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        ripples = ToTexture2D(ripplesTexture);
+        ripples = ToTexture2D(ripplesTexture, ripples);
         playerPos = Shader.GetGlobalVector("_PlayerPos");
     }
-    
-    Texture2D ToTexture2D(RenderTexture rTex)
-    {
-        Texture2D tex = new Texture2D(rTex.width, rTex.height, TextureFormat.RGB24, false);
+
+    Texture2D ToTexture2D(RenderTexture rTex, Texture2D tex)
+    {        
         // ReadPixels looks at the active RenderTexture.
         RenderTexture.active = rTex;
         tex.ReadPixels(new Rect(0, 0, rTex.width, rTex.height), 0, 0);
