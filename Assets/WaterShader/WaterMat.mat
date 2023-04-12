@@ -68,7 +68,7 @@ Material:
     - _ReflectionRefraction: 0.2
     - _Refraction: 0.1
     - _RippleHeight: 2
-    - _RippleRefractionStrength: 0.6
+    - _RippleRefractionStrength: 10
     - _Smoothness: 1
     - _WaterLerp: 0.5
     - _WaveAmplitude: 0.05
