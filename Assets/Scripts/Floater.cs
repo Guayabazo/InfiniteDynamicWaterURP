@@ -84,6 +84,10 @@ public class Floater : MonoBehaviour
 
                 if (underWaterFloater[i] != wasUnderWaterFloater[i] && inOut[i]!= null)
                 {
+                    ParticleSystem.MainModule displacementPar = inOut[i].main;
+                    float colorMultiplier = Mathf.Abs(rb.velocity.y * 0.1f);
+                    colorMultiplier = Mathf.Clamp(colorMultiplier, 0f, 0.75f);
+                    displacementPar.startColor = Color.white * colorMultiplier;
                     inOut[i].Play();
                 }
 

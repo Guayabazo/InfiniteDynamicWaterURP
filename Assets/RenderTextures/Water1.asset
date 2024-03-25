@@ -16,7 +16,7 @@ CustomRenderTexture:
   serializedVersion: 5
   m_Width: 512
   m_Height: 512
-  m_AntiAliasing: 1
+  m_AntiAliasing: 8
   m_MipCount: -1
   m_DepthStencilFormat: 90
   m_ColorFormat: 8

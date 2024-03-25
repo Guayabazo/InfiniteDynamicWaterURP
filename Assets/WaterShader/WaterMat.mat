@@ -52,23 +52,24 @@ Material:
     m_Ints: []
     m_Floats:
     - _CameraSize: 50
-    - _Depth: 10000
-    - _DepthFade: 0.5
+    - _Depth: 500
+    - _DepthFade: 0
     - _Foam: 2
     - _FoamCutOff: 2
-    - _FoamScale: 2
+    - _FoamScale: 3
     - _FoamSpeed: 0.2
-    - _FoamStrength: 0
+    - _FoamStrength: 1
     - _Metalic: 0
     - _Metallic: 0.441
-    - _NeightbourgDistance: 0.1
+    - _NeightbourgDistance: 0.2
     - _NormalStrength: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReflectionRefraction: 0.2
     - _Refraction: 0.1
     - _RippleHeight: 2
-    - _RippleRefractionStrength: 10
+    - _RippleRefractionStrength: 5
+    - _RipplesNormalsMultiplier: 0.5
     - _Smoothness: 1
     - _WaterLerp: 0.5
     - _WaveAmplitude: 0.05
